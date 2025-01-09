@@ -5,7 +5,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 
 const app = express();
-const port = process.env.PORT || 5000; // Define the port
+const port = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({ origin: 'http://localhost:3000' }));

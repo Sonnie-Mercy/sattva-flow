@@ -3,7 +3,7 @@ const router = express.Router();
 const cycleController = require('../controllers/cycleController');
 const authMiddleware = require('../middleware/authMiddleware'); // Import authentication middleware
 
-router.use(authMiddleware); // Apply authentication to all cycle routes
+router.use(authMiddleware);
 
 router.post('/', cycleController.createCycle);
 router.get('/', cycleController.getCycles);

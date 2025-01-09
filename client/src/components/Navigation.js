@@ -6,9 +6,11 @@ function Navigation() {
     <nav className="navbar">
       <ul>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/cycle-tracker">Cycle Tracker</NavLink></li>
-        <li><NavLink to="/routines">Routines</NavLink></li>
-        <li><NavLink to="/profile">Profile</NavLink></li>
+        <li><NavLink to="/CycleTracking">Cycle Tracking</NavLink></li>
+        <li><NavLink to="/Routines">Routines</NavLink></li>
+        <li><NavLink to="/Profile">Profile</NavLink></li>
+        <li><NavLink to="/login">Login</NavLink></li>
+        <li><NavLink to="/register">Register</NavLink></li>
       </ul>
     </nav>
   );

@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs'); // For password hashing
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -15,17 +14,11 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  // Add fields for user preferences (e.g., preferred difficulty)
-});
-
-userSchema.pre('save', async function(next) {
-  try {
-    const salt = await bcrypt.genSalt(10);
-    this.password = await bcrypt.hash(this.password, salt);
-    next();
-  } catch (error) {
-    next(error);
-  }
+  role: {
+    type: String,
+    enum: ['user', 'admin'], // Define possible roles
+    default: 'user', 
+  },
 });
 
 module.exports = mongoose.model('User', userSchema);
